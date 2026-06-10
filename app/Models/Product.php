@@ -15,6 +15,6 @@ class Product
 
     public function all()
     {
-        echo "salvar dado no json";
+        echo "salvar dado no json/model";
     }
 }

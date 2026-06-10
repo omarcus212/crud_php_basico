@@ -1,18 +1,23 @@
 <?php
-declare(strict_types=1);
 
-session_start();
+declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use App\Core\Router;
-
-$router = new Router();
-
-require_once __DIR__ . '/../router/routes.php';
+use App\Controllers\ProductController;
 
 $route = $_GET['route'] ?? 'products';
 
-$router->dispatch($route);
+$controller = new ProductController();
 
-?>
+switch ($route) {
+
+    case 'products':
+        $controller->index();
+        break;
+
+    default:
+        http_response_code(404);
+        echo '404 - Página não encontrada';
+        break;
+}
