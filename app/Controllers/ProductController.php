@@ -13,7 +13,7 @@ class ProductController
 
         $products = $product->all();
 
-        // require __DIR__ . '/../Views/products/index.php';
+        require __DIR__ . '/../Views/products/index.php';
     }
 }
 ?>

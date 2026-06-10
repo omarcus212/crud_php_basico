@@ -13,8 +13,15 @@ class Product
             '/../../storage/products.json';
     }
 
-    public function all()
+    public function all(): array
     {
-        echo "salvar dado no json/model";
+        if (!file_exists($this->path)) {
+            return [];
+        }
+
+        $jsonData = file_get_contents($this->path);
+        $products = json_decode($jsonData, true);
+
+        return $products ?? [];
     }
 }
