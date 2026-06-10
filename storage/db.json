@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "nome": "Notebook Dell Inspiron",
+    "preco": 3499.90,
+    "estoque": 12,
+    "descricao": "Notebook com processador Intel Core i5 e 8GB de RAM."
+  },
+  {
+    "id": 2,
+    "nome": "Mouse Gamer RGB",
+    "preco": 129.90,
+    "estoque": 35,
+    "descricao": "Mouse óptico com iluminação RGB e 7200 DPI."
+  },
+  {
+    "id": 3,
+    "nome": "Teclado Mecânico",
+    "preco": 249.90,
+    "estoque": 20,
+    "descricao": "Teclado mecânico com switches azuis e layout ABNT2."
+  },
+  {
+    "id": 4,
+    "nome": "Monitor 24 Polegadas",
+    "preco": 899.90,
+    "estoque": 8,
+    "descricao": "Monitor Full HD com taxa de atualização de 75Hz."
+  },
+  {
+    "id": 5,
+    "nome": "Headset Gamer",
+    "preco": 199.90,
+    "estoque": 18,
+    "descricao": "Headset com microfone removível e som surround."
+  },
+  {
+    "id": 6,
+    "nome": "SSD 1TB",
+    "preco": 429.90,
+    "estoque": 25,
+    "descricao": "SSD SATA de 1TB para armazenamento rápido."
+  },
+  {
+    "id": 7,
+    "nome": "Webcam Full HD",
+    "preco": 159.90,
+    "estoque": 14,
+    "descricao": "Webcam com resolução 1080p para reuniões e streaming."
+  },
+  {
+    "id": 8,
+    "nome": "Cadeira Gamer",
+    "preco": 1199.90,
+    "estoque": 5,
+    "descricao": "Cadeira ergonômica com ajuste de altura e inclinação."
+  },
+  {
+    "id": 9,
+    "nome": "Hub USB 3.0",
+    "preco": 79.90,
+    "estoque": 40,
+    "descricao": "Hub com 4 portas USB 3.0 para expansão de conexões."
+  },
+  {
+    "id": 10,
+    "nome": "Caixa de Som Bluetooth",
+    "preco": 299.90,
+    "estoque": 16,
+    "descricao": "Caixa de som portátil com conexão Bluetooth 5.0."
+  }
+]
