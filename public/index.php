@@ -15,6 +15,26 @@ switch ($route) {
     case 'products':
         $controller->index();
         break;
+    
+    case 'products/create':
+        $controller->create();
+        break;
+    
+    case 'products/store':
+        $controller->store($_POST);
+        break;
+
+    case 'products/edit':
+        $controller->edit($_GET['id']);
+        break;
+
+    case 'products/update':
+        $controller->update($_GET['id'], $_POST);
+        break;
+
+    case 'products/delete':
+        $controller->destroy($_GET['id']);
+        break;
 
     default:
         http_response_code(404);
