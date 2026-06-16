@@ -25,6 +25,13 @@
             </div>
         <?php endif; ?>
 
+
+        <?php if (isset($_SESSION['error'])): ?>
+            <div class="mt-6 p-4 bg-red-50 border border-red-100 text-red-700 rounded-lg text-sm text-center">
+                <?= $_SESSION['error']; unset($_SESSION['error']); ?>
+            </div>
+        <?php endif; ?>
+
         <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <table class="w-full text-left border-collapse">
                 <thead class="bg-gray-50 border-b border-gray-100">
