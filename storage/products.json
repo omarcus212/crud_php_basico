@@ -68,5 +68,12 @@
         "preco": 299.9,
         "estoque": 16,
         "descricao": "Caixa de som portátil com conexão Bluetooth 5.0."
+    },
+    {
+        "nome": "Monitor LCD 500hz AOC",
+        "preco": "4500",
+        "estoque": "29",
+        "descricao": "Monitor LCD 500hz AOC - Gamer pro - cs2 - flexivel",
+        "id": 11
     }
 ]

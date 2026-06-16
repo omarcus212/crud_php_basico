@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+declare(strict_types=1);
 
 namespace App\Controllers;
 
@@ -8,10 +10,8 @@ use App\Core\BaseController;
 class ProductController extends BaseController
 {
     public function index(): void
-    
     {
         $product = new Product();
-
         $products = $product->all();
 
         require __DIR__ . '/../Views/products/index.php';
@@ -25,29 +25,22 @@ class ProductController extends BaseController
     public function store(array $body): void
     {
         $product = new Product();
-
         $product->products = $body;
 
-        if($product->save()){
-            
+        if ($product->save()) {
             $_SESSION['success'] = 'Produto cadastrado com sucesso!';
             $this->redirect('products');
-
-        }else{
             
-            $this->create();
+        } else {
+            $_SESSION['error'] = 'Erro ao cadastrar o produto. Por favor, tente novamente.';
         }
-           
     }
 
 
     public function edit(string $id): void
     {
-
         $id = (int) $id;
-
         $product = new Product();
-
         $product = $product->getId($id);
 
         require_once __DIR__ . '/../Views/products/edit.php';
@@ -55,30 +48,34 @@ class ProductController extends BaseController
 
     public function update(string $id, array $body): void
     {
-
         $id = (int) $id;
-
         $product = new Product();
-
         $product->products = $body;
         
-        $product->update($id);
+        if($product->update($id)){
+            $_SESSION['success'] = 'Produto atualizado com sucesso!';
+            $this->redirect('products');
 
-        $this->redirect('products');
+        }else{
+            $_SESSION['error'] = 'Erro ao atualizar o produto. Por favor, tente novamente.';
+        }
 
     }
 
     public function destroy(string $id): void
     {
-
         $id = (int) $id;
-
         $product = new Product();
+        
+        if($product->destroy($id)){
 
-        $product->destroy($id);
+            $_SESSION['success'] = 'Produto excluído com sucesso!';
+            $this->redirect('products');
 
-        $this->redirect('products');
+        }else{
+            $_SESSION['error'] = 'Erro ao excluir o produto. Por favor, tente novamente.';
+        }
 
-    }   
+        
+    }
 }
-?>

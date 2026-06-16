@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+session_start(); // Inicia a sessão PHP
+
 use App\Controllers\ProductController;
 
 $route = $_GET['route'] ?? 'products';
